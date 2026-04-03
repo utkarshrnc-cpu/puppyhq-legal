@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PuppyHQ — Privacy Policy & Terms of Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --clr-bg: #FDFAF5;
+    --clr-surface: #FFFFFF;
+    --clr-accent: #D4793A;
+    --clr-accent-light: #F5E6D8;
+    --clr-text: #2C2420;
+    --clr-text-muted: #7A6E64;
+    --clr-border: #E8DFD4;
+    --clr-heading: #1A120B;
+    --clr-highlight: #FFF8F0;
+    --clr-warning-bg: #FFF3E8;
+    --clr-warning-border: #E8A65D;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+    --max-w: 780px;
+    --radius: 10px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16.5px;
+    line-height: 1.72;
+    color: var(--clr-text);
+    background: var(--clr-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Hero header ── */
+  .hero {
+    background: linear-gradient(165deg, #1A120B 0%, #2C2420 55%, #3E2F24 100%);
+    color: #FFF;
+    padding: 64px 24px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 600px 300px at 50% 100%, rgba(212,121,58,.18), transparent);
+    pointer-events: none;
+  }
+  .hero-paw {
+    font-size: 44px;
+    margin-bottom: 12px;
+    display: block;
+    animation: paw-bounce 2s ease-in-out infinite;
+  }
+  @keyframes paw-bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px) rotate(-4deg); }
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(28px, 5vw, 42px);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .hero h1 span { color: var(--clr-accent); }
+  .hero p {
+    font-size: 15px;
+    color: rgba(255,255,255,.55);
+    font-weight: 300;
+  }
+
+  /* ── Navigation tabs ── */
+  .tab-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--clr-surface);
+    border-bottom: 1px solid var(--clr-border);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,.04);
+  }
+  .tab-btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    color: var(--clr-text-muted);
+    background: none;
+    border: none;
+    padding: 16px 28px;
+    cursor: pointer;
+    position: relative;
+    transition: color .25s;
+  }
+  .tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 3px;
+    background: var(--clr-accent);
+    border-radius: 3px 3px 0 0;
+    transition: transform .3s cubic-bezier(.4,0,.2,1);
+  }
+  .tab-btn.active { color: var(--clr-accent); }
+  .tab-btn.active::after { transform: translateX(-50%) scaleX(1); }
+  .tab-btn:hover { color: var(--clr-heading); }
+
+  /* ── Content panels ── */
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade-in .35s ease; }
+  @keyframes fade-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .content-wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  /* ── Typography ── */
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--clr-heading);
+    margin: 52px 0 18px;
+    letter-spacing: -0.015em;
+    position: relative;
+    padding-left: 18px;
+  }
+  h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 4px;
+    border-radius: 4px;
+    background: var(--clr-accent);
+  }
+  h2:first-child { margin-top: 0; }
+
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 19px;
+    color: var(--clr-heading);
+    margin: 32px 0 10px;
+  }
+
+  p { margin-bottom: 14px; }
+
+  a { color: var(--clr-accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: #B5612A; }
+
+  ul, ol {
+    padding-left: 24px;
+    margin-bottom: 14px;
+  }
+  li { margin-bottom: 6px; }
+
+  strong { font-weight: 600; color: var(--clr-heading); }
+
+  .meta {
+    display: inline-block;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--clr-text-muted);
+    background: var(--clr-accent-light);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+  }
+
+  /* ── Callout boxes ── */
+  .callout {
+    background: var(--clr-warning-bg);
+    border-left: 4px solid var(--clr-warning-border);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 22px 26px;
+    margin: 28px 0;
+    font-size: 15.5px;
+  }
+  .callout.important {
+    background: #FFF0F0;
+    border-left-color: #D94848;
+  }
+  .callout strong { display: block; margin-bottom: 6px; font-size: 15px; letter-spacing: .02em; text-transform: uppercase; }
+
+  .legal-caps {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--clr-text-muted);
+    background: var(--clr-highlight);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin: 20px 0;
+  }
+
+  /* ── Divider ── */
+  hr {
+    border: none;
+    height: 1px;
+    background: var(--clr-border);
+    margin: 44px 0;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    padding: 32px 24px 48px;
+    font-size: 13.5px;
+    color: var(--clr-text-muted);
+    border-top: 1px solid var(--clr-border);
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+  .footer em { font-style: italic; font-size: 12.5px; display: block; margin-top: 10px; opacity: .7; }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .tab-btn { padding: 14px 16px; font-size: 12.5px; }
+    h2 { font-size: 22px; }
+    .content-wrap { padding: 36px 18px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════ HERO ═══════ -->
+<header class="hero">
+  <span class="hero-paw">🐾</span>
+  <h1>Puppy<span>HQ</span></h1>
+  <p>Privacy Policy · Legal Disclaimer · Terms of Service</p>
+</header>
+
+<!-- ═══════ TAB BAR ═══════ -->
+<nav class="tab-bar">
+  <button class="tab-btn active" data-tab="privacy">Privacy Policy</button>
+  <button class="tab-btn" data-tab="disclaimer">AI Disclaimer</button>
+  <button class="tab-btn" data-tab="terms">Terms of Service</button>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     PANEL 1 — PRIVACY POLICY
+     ═══════════════════════════════════════════ -->
+<div id="privacy" class="panel active">
+<div class="content-wrap">
+  <span class="meta">Effective April 3, 2026 · Last Updated April 3, 2026</span>
+
+  <h2>1. Introduction</h2>
+  <p>Welcome to PuppyHQ ("App", "we", "us", or "our"). This Privacy Policy explains how we collect, use, store, and protect your personal information when you use PuppyHQ. By using the App, you agree to the practices described in this policy.</p>
+
+  <h2>2. Information We Collect</h2>
+
+  <h3>2.1 Account Information</h3>
+  <p>Email address — used for authentication, account recovery, and essential communications.</p>
+
+  <h3>2.2 Pet Information</h3>
+  <ul>
+    <li>Pet name</li>
+    <li>Breed</li>
+    <li>Health data (weight, vaccinations, medical history, vet visit notes, and other health-related records you choose to enter)</li>
+  </ul>
+
+  <h3>2.3 Activity &amp; Usage Data</h3>
+  <ul>
+    <li>Activity logs (walks, feeding schedules, training sessions, and other pet-related activities you record)</li>
+    <li>App usage patterns and interaction data</li>
+  </ul>
+
+  <h3>2.4 Photos &amp; Media</h3>
+  <p>Photos of your pet(s) that you upload within the App.</p>
+
+  <h2>3. How We Use Your Information</h2>
+  <p>We use the information we collect to provide, maintain, and improve the App's core functionality; personalise your experience and deliver relevant content; generate AI-powered insights and recommendations (see Section 5); send essential account-related communications; and diagnose technical issues.</p>
+
+  <h2>4. Data Storage &amp; Security</h2>
+  <p>Your data is stored using <strong>Supabase</strong>, a cloud-hosted database platform. Supabase infrastructure is hosted on Amazon Web Services (AWS) and employs industry-standard security measures including encryption at rest and in transit. While we take reasonable steps to protect your information, no method of electronic storage or transmission is 100% secure, and we cannot guarantee absolute security.</p>
+
+  <h2>5. Third-Party AI Services</h2>
+  <p>PuppyHQ uses <strong>OpenAI's API</strong> to power AI-driven features such as health tips, activity suggestions, and general pet care recommendations. When you interact with AI features, relevant data (such as your pet's breed, age, or health information) may be sent to OpenAI's servers for processing. We only share the minimum data necessary to generate a response.</p>
+  <p>Please review <a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI's Privacy Policy</a> and <a href="https://openai.com/policies" target="_blank" rel="noopener">Usage Policies</a> for details on how they handle data.</p>
+
+  <h2>6. Data Sharing</h2>
+  <p>We do <strong>not</strong> sell your personal information. We may share data only in the following circumstances:</p>
+  <ul>
+    <li><strong>Service Providers:</strong> With third-party services (Supabase, OpenAI) strictly as needed to operate the App.</li>
+    <li><strong>Legal Obligations:</strong> If required by law, regulation, or legal process.</li>
+    <li><strong>Safety:</strong> To protect the rights, safety, or property of our users or the public.</li>
+  </ul>
+
+  <h2>7. Your Rights</h2>
+  <p>Depending on your jurisdiction, you may have the right to access the personal data we hold about you, request correction of inaccurate data, request deletion of your data, export your data in a portable format, and withdraw consent at any time.</p>
+  <p>To exercise any of these rights, contact us at <a href="mailto:utkarsh.rnc@gmail.com">utkarsh.rnc@gmail.com</a>.</p>
+
+  <h2>8. Data Retention</h2>
+  <p>We retain your data for as long as your account is active or as needed to provide services. If you delete your account, we will delete or anonymise your personal data within 30 days, except where retention is required by law.</p>
+
+  <h2>9. Children's Privacy</h2>
+  <p>PuppyHQ is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such data, we will delete it promptly.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. We will notify you of material changes by posting the updated policy within the App and updating the "Last Updated" date above. Continued use of the App after changes constitutes acceptance of the revised policy.</p>
+
+  <h2>11. Contact Us</h2>
+  <p>If you have questions or concerns about this Privacy Policy, please contact us at:<br>
+  <strong>Email:</strong> <a href="mailto:utkarsh.rnc@gmail.com">utkarsh.rnc@gmail.com</a></p>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PANEL 2 — AI DISCLAIMER
+     ═══════════════════════════════════════════ -->
+<div id="disclaimer" class="panel">
+<div class="content-wrap">
+  <span class="meta">Effective April 3, 2026 · Last Updated April 3, 2026</span>
+
+  <div class="callout important">
+    <strong>⚠ Important — Please Read Carefully</strong>
+    This disclaimer applies to all AI-generated content, recommendations, tips, and insights provided within PuppyHQ.
+  </div>
+
+  <h2>No Medical or Veterinary Advice</h2>
+  <p>PuppyHQ provides AI-generated recommendations, tips, and insights for <strong>informational and reference purposes only</strong>. These are <strong>not</strong> a substitute for professional veterinary advice, diagnosis, or treatment.</p>
+  <p>The AI features in PuppyHQ do not constitute medical or veterinary advice. The recommendations generated by the App's AI are produced by a third-party language model (OpenAI) and may be inaccurate, incomplete, outdated, or inappropriate for your specific pet's situation.</p>
+
+  <h2>User Responsibility</h2>
+  <ul>
+    <li><strong>Always consult a qualified veterinarian</strong> before making any decisions about your pet's health, diet, medication, or treatment based on information provided by the App.</li>
+    <li><strong>Use your own judgement.</strong> You are solely responsible for evaluating and acting upon any AI-generated content.</li>
+    <li>Do not delay seeking professional veterinary care because of something you read or received through the App.</li>
+  </ul>
+
+  <h2>Limitation of Liability</h2>
+  <div class="legal-caps">
+    To the fullest extent permitted by applicable law, the creators, developers, and operators of PuppyHQ shall <strong>not</strong> be held responsible or liable for any loss, injury, harm, damage, or adverse outcome — whether to you, your pet, or any third party — that arises directly or indirectly from: reliance on AI-generated recommendations, suggestions, or content provided through the App; decisions made based on information obtained from the App; or errors, omissions, or inaccuracies in AI-generated output.
+  </div>
+  <div class="legal-caps">
+    All AI-generated content is provided "as is" without warranties of any kind, express or implied, including but not limited to warranties of accuracy, completeness, fitness for a particular purpose, or non-infringement.
+  </div>
+
+  <h2>Acknowledgement</h2>
+  <p>By using PuppyHQ's AI features, you acknowledge that you have read and understood this disclaimer and agree that AI-generated recommendations are for reference only, and that the App's creators bear no responsibility for actions taken based on such recommendations.</p>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PANEL 3 — TERMS OF SERVICE
+     ═══════════════════════════════════════════ -->
+<div id="terms" class="panel">
+<div class="content-wrap">
+  <span class="meta">Effective April 3, 2026 · Last Updated April 3, 2026</span>
+
+  <h2>1. Acceptance of Terms</h2>
+  <p>By downloading, installing, accessing, or using PuppyHQ ("App", "Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+  <p>These Terms constitute a legally binding agreement between you ("User", "you", "your") and the creators and operators of PuppyHQ ("we", "us", "our").</p>
+
+  <h2>2. Description of Service</h2>
+  <p>PuppyHQ is a pet management application that allows users to track pet information, health records, activity logs, and photos. The App also provides AI-powered recommendations and insights using third-party AI services. The Service is provided on an "as is" and "as available" basis.</p>
+
+  <h2>3. Eligibility</h2>
+  <p>You must be at least 13 years of age to use PuppyHQ. If you are under 18, you must have the consent of a parent or legal guardian. By using the App, you represent and warrant that you meet these eligibility requirements.</p>
+
+  <h2>4. User Accounts</h2>
+  <h3>4.1 Registration</h3>
+  <p>You may be required to create an account to access certain features. You agree to provide accurate, current, and complete information during registration and to keep your account information up to date.</p>
+  <h3>4.2 Account Security</h3>
+  <p>You are responsible for maintaining the confidentiality of your login credentials and for all activity that occurs under your account. You agree to notify us immediately of any unauthorised use of your account.</p>
+  <h3>4.3 Account Termination</h3>
+  <p>We reserve the right to suspend or terminate your account at our sole discretion, with or without notice, for conduct that we determine violates these Terms or is harmful to other users, us, or third parties.</p>
+
+  <h2>5. User Content</h2>
+  <h3>5.1 Ownership</h3>
+  <p>You retain ownership of all content you submit, upload, or create within the App, including pet information, photos, health records, and activity logs ("User Content").</p>
+  <h3>5.2 Licence Grant</h3>
+  <p>By uploading User Content, you grant us a limited, non-exclusive, worldwide, royalty-free licence to use, store, process, and display your content solely for the purpose of providing and improving the Service. This licence terminates when you delete your content or your account.</p>
+  <h3>5.3 Prohibited Content</h3>
+  <p>You agree not to upload content that is illegal, harmful, abusive, defamatory, obscene, or that infringes on the intellectual property rights of any third party.</p>
+
+  <h2>6. Acceptable Use</h2>
+  <p>You agree not to use the App for any unlawful purpose; attempt to gain unauthorised access to the App's systems, servers, or databases; reverse engineer, decompile, or disassemble any part of the App; interfere with or disrupt the integrity or performance of the Service; use the App to transmit malware or harmful code; scrape or harvest data through automated means; impersonate any person or entity; or use the App in any manner that could damage or overburden our infrastructure.</p>
+
+  <h2>7. AI-Powered Features</h2>
+  <h3>7.1 Third-Party AI</h3>
+  <p>PuppyHQ uses OpenAI's API to provide AI-generated recommendations and insights. By using these features, you acknowledge that your data may be processed by OpenAI in accordance with their terms and policies.</p>
+
+  <div class="callout">
+    <strong>7.2 No Professional Advice</strong>
+    AI-generated content is provided strictly for informational and reference purposes. It does not constitute veterinary, medical, or professional advice. Always consult a qualified veterinarian before acting on any AI-generated recommendation. Refer to the AI Disclaimer tab for full details.
+  </div>
+
+  <h3>7.3 Accuracy</h3>
+  <p>We do not guarantee the accuracy, reliability, or completeness of any AI-generated output. AI recommendations may contain errors, may be outdated, and may not be suitable for your pet's specific needs. You acknowledge and accept this risk.</p>
+
+  <h2>8. Intellectual Property</h2>
+  <h3>8.1 Our Rights</h3>
+  <p>The App, including its design, code, graphics, logos, trademarks, and all other proprietary materials, is owned by us and protected by applicable intellectual property laws.</p>
+  <h3>8.2 Feedback</h3>
+  <p>If you provide suggestions, ideas, or feedback about the App, you grant us an unrestricted, irrevocable, royalty-free licence to use such feedback for any purpose without obligation to you.</p>
+
+  <h2>9. Subscriptions &amp; Payments</h2>
+  <h3>9.1 In-App Purchases</h3>
+  <p>PuppyHQ may offer premium features or subscriptions through in-app purchases. All purchases are processed through the Apple App Store via StoreKit and are subject to Apple's terms and conditions.</p>
+  <h3>9.2 Refunds</h3>
+  <p>Refund requests for in-app purchases are handled by Apple in accordance with their refund policies. We do not process refunds directly.</p>
+  <h3>9.3 Price Changes</h3>
+  <p>We reserve the right to modify pricing for premium features at any time. Changes will not affect existing active subscriptions until their renewal date.</p>
+
+  <h2>10. Privacy</h2>
+  <p>Your use of the App is also governed by our Privacy Policy, which describes how we collect, use, and protect your personal information. By using the App, you consent to the practices described in the Privacy Policy.</p>
+
+  <h2>11. Disclaimer of Warranties</h2>
+  <div class="legal-caps">
+    TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
+  </div>
+
+  <h2>12. Limitation of Liability</h2>
+  <div class="legal-caps">
+    TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WE, OUR DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, OR GOODWILL; INJURY OR HARM TO ANY PET OR ANIMAL; ANY DAMAGES ARISING FROM RELIANCE ON AI-GENERATED RECOMMENDATIONS; SERVICE INTERRUPTIONS OR DATA LOSS; OR UNAUTHORISED ACCESS TO OR ALTERATION OF YOUR DATA. OUR TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED THE AMOUNT YOU HAVE PAID US IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR ₹100, WHICHEVER IS GREATER.
+  </div>
+
+  <h2>13. Indemnification</h2>
+  <p>You agree to indemnify, defend, and hold harmless PuppyHQ and its creators, operators, employees, and affiliates from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable legal fees) arising out of or in connection with your use of the App, your violation of these Terms, your User Content, or any action taken based on AI-generated recommendations provided by the App.</p>
+
+  <h2>14. Third-Party Services</h2>
+  <p>The App may contain links to or integrate with third-party services (including Supabase and OpenAI). We are not responsible for the content, privacy practices, or terms of any third-party services. Your interactions with third-party services are governed by their respective terms and policies.</p>
+
+  <h2>15. Modifications to the Service</h2>
+  <p>We reserve the right to modify, suspend, or discontinue any part of the App at any time, with or without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuation of the Service.</p>
+
+  <h2>16. Changes to These Terms</h2>
+  <p>We may revise these Terms from time to time. Material changes will be communicated by posting the updated Terms within the App and updating the "Last Updated" date. Your continued use of the App after any changes constitutes acceptance of the revised Terms.</p>
+
+  <h2>17. Governing Law &amp; Dispute Resolution</h2>
+  <p>These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising out of or relating to these Terms or the App shall be subject to the exclusive jurisdiction of the courts in Ranchi, Jharkhand, India.</p>
+
+  <h2>18. Severability</h2>
+  <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+
+  <h2>19. Entire Agreement</h2>
+  <p>These Terms, together with our Privacy Policy and Legal Disclaimer, constitute the entire agreement between you and PuppyHQ regarding your use of the App, and supersede all prior agreements or understandings.</p>
+
+  <h2>20. Contact Us</h2>
+  <p>If you have any questions about these Terms, please contact us at:<br>
+  <strong>Email:</strong> <a href="mailto:utkarsh.rnc@gmail.com">utkarsh.rnc@gmail.com</a></p>
+</div>
+</div>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  <p>© 2026 PuppyHQ. All rights reserved. Contact: <a href="mailto:utkarsh.rnc@gmail.com">utkarsh.rnc@gmail.com</a></p>
+  <em>This document does not constitute legal advice. Consult a legal professional to ensure compliance with applicable laws in your jurisdiction.</em>
+</footer>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
