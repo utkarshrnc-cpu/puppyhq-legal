@@ -104,7 +104,7 @@ We may update this Privacy Policy from time to time. We will notify you of mater
 
 If you have questions or concerns about this Privacy Policy, please contact us at:
 
-**Email:** [your-contact-email@example.com]
+**Email:** utkarsh.rnc@gmail.com
 
 ---
 
@@ -138,6 +138,3 @@ To the fullest extent permitted by applicable law, the creators, developers, and
 
 By using PuppyHQ's AI features, you acknowledge that you have read and understood this disclaimer and agree that AI-generated recommendations are for reference only, and that the App's creators bear no responsibility for actions taken based on such recommendations.
 
----
-
-*This document does not constitute legal advice. You are encouraged to consult a legal professional to ensure compliance with applicable privacy laws in your jurisdiction.*
